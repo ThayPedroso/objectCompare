@@ -1,4 +1,5 @@
 ﻿using System;
+using objectCompare.Entities;
 
 namespace objectCompare
 {
@@ -6,7 +7,13 @@ namespace objectCompare
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Client a = new Client { Name = "Maria", Email = "maria@gmail.com" };
+            Client b = new Client { Name = "Maria", Email = "maria@gmail.com" };
+
+            Console.WriteLine(a.Equals(b));
+            Console.WriteLine(a == b);
+            Console.WriteLine(a.GetHashCode());
+            Console.WriteLine(b.GetHashCode());
         }
     }
 }
